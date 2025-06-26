@@ -27,8 +27,7 @@ public class C02RabbitConfig {
 
     @Bean
     public MessageConverter messageConverter() {
-        Jackson2JsonMessageConverter jackson2JsonMessageConverter = new Jackson2JsonMessageConverter();
-        return jackson2JsonMessageConverter;
+        return new Jackson2JsonMessageConverter();
     }
 
     @Bean

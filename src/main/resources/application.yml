@@ -3,6 +3,6 @@ spring:
     addresses: localhost:5672
 
 rabbitmq:
-  exchange: myexhange
+  exchange: myexchange
   queue: myqueue
   routing-key: mykey

@@ -10,10 +10,10 @@ public class C01Init {
 
     @Value("${rabbitmq.exchange}")
     private String exchange;
-    @Value("${rabbitmq.routing-key}")
-    private String routingKey;
     @Value("${rabbitmq.queue}")
     private String queue;
+    @Value("${rabbitmq.routing-key}")
+    private String routingKey;
 
     @Bean
     public TopicExchange getExchange() {
@@ -26,8 +26,7 @@ public class C01Init {
     }
 
     @Bean
-    public Binding binding()
-    {
+    public Binding binding() {
         return BindingBuilder
                 .bind(getQueue())
                 .to(getExchange())

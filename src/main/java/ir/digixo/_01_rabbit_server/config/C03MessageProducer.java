@@ -12,7 +12,7 @@ public class C03MessageProducer {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    public void sendMessage(Object payload,String exchange,String routingKey) {
-        rabbitTemplate.convertAndSend(exchange,routingKey,payload);
+    public void sendMessage(Object payload, String exchange, String routingKey) {
+        rabbitTemplate.convertAndSend(exchange, routingKey, payload);
     }
 }

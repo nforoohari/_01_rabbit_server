@@ -16,8 +16,8 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(C03MessageProducer c03MessageProducer) {
         return args -> {
-            c03MessageProducer.sendMessage("Hello from spring", "myexhange", "mykey");
-            System.out.println("The message was sent : Hello from spring");
+            c03MessageProducer.sendMessage("Hello From Rabbit Message Producer", "myexchange", "mykey");
+            System.out.println("The message was sent : Hello From Rabbit Message Producer");
         };
     }
 }
